@@ -31,13 +31,15 @@ namespace ShinyCounter {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnContinuar = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbHunts = new System.Windows.Forms.ComboBox();
             this.lblErro = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -96,14 +98,25 @@ namespace ShinyCounter {
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.btnContinuar);
-            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.cmbHunts);
             this.panel2.Controls.Add(this.lblErro);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(12, 176);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(444, 156);
+            this.panel2.Size = new System.Drawing.Size(444, 139);
             this.panel2.TabIndex = 10;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(356, 10);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(66, 65);
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
             // 
             // btnContinuar
             // 
@@ -113,14 +126,16 @@ namespace ShinyCounter {
             this.btnContinuar.TabIndex = 10;
             this.btnContinuar.Text = "Continuar";
             this.btnContinuar.UseVisualStyleBackColor = true;
+            this.btnContinuar.Click += new System.EventHandler(this.BtnContinuar_Click);
             // 
-            // comboBox1
+            // cmbHunts
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(25, 83);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(274, 31);
-            this.comboBox1.TabIndex = 9;
+            this.cmbHunts.FormattingEnabled = true;
+            this.cmbHunts.Location = new System.Drawing.Point(25, 83);
+            this.cmbHunts.Name = "cmbHunts";
+            this.cmbHunts.Size = new System.Drawing.Size(274, 31);
+            this.cmbHunts.TabIndex = 9;
+            this.cmbHunts.SelectedIndexChanged += new System.EventHandler(this.CmbHunts_SelectedIndexChanged);
             // 
             // lblErro
             // 
@@ -148,10 +163,13 @@ namespace ShinyCounter {
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(468, 344);
+            this.ClientSize = new System.Drawing.Size(468, 330);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Power Red and Green", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Início";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -159,6 +177,7 @@ namespace ShinyCounter {
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -171,9 +190,10 @@ namespace ShinyCounter {
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnContinuar;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbHunts;
         private System.Windows.Forms.Label lblErro;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

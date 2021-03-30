@@ -6,6 +6,9 @@ namespace ShinyCounter {
     class Yagami {
         public static readonly string pathHunts = ".\\hunts";
         public static string huntAtual = "";
+        public static string arquivoHuntAtual = "";
+        public static string arquivoTimerAtual = "";
+        public static string arquivoTConfigAtual = "";
 
 
         public static Pokemon[] pokemons = {
